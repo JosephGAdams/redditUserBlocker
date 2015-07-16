@@ -1,7 +1,6 @@
 chrome.extension.sendMessage({greeting: "test"}, function(response){
-	alert("popup.js");
+	alert("pop.js");
 });
-
 
 //listen for addUsrBtn click from popup.html
 	//call add user to list
