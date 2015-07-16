@@ -1,0 +1,31 @@
+{
+	"name": "Reddit User Blocker",
+	"description": "This extension blocks comments, submissions or private messages from selected users",
+	"version": "1.0",
+	"manifest_version": 2,
+
+	"browser_action":
+	{
+		"default_title": "Add users here.",
+		"default_popup": "popup.html"
+	},
+
+	"background":
+	{
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+
+	"content_scripts":
+	[{
+		"matches":["http://*/*", "https://*/*"],
+		"js": ["content_script.js"]
+	}],
+
+	"permissions":
+	[
+		"activeTab",
+		"https://*/*",
+		"http://*/*"
+	]
+}
